@@ -1,3 +1,26 @@
-h1{
-  color: red;
+
+header{
+  background-color: yellow;
+  text-align: center;
+  border-bottom: 3px solid gray;
 }
+aside{
+  background-color:limegreen;
+  float: left;
+  width: 170px; height: 300px;
+  border-right: 3px solid gray;
+  padding: 5px; margin: 0px;
+}
+section{
+  float: left; width: 500px;
+  background-color: orange;
+  padding: 10px; margin: 0px; border: 0px;
+}
+footer{
+  background-color: pink;
+}
+.main_img{padding: 20px;}
+
+#M_list {font-weight: bold;}
+#S_list {color: black; text-decoration: overline;}
+#main_side {}
