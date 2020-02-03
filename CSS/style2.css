@@ -1,35 +1,27 @@
-
-body{
-  padding: 0px; margin: 0px
-}
 header{
-  background-color: lightgrey;
   border-bottom: 3px solid gray;
   text-align: right;
 }
 aside{
-  min-height: 100%;
   float: left;
   width: 170px; height: 300px;
   border-right: 3px solid gray;
   padding: 5px; margin: 0px;
 }
-#m_search{
-  padding : 5px; margin: 0px
-
-}
 section{
   padding: 10px; margin: 0px; border: 0px;
 }
 footer{
-  background-color: lightgrey;
-  border-top: 3px solid gray;
-  border-bottom: 3px solid gray;
+}
+#search_side{
+  padding : 10px; margin: 0px
 }
 /*테스트 온*/
+body.test header{background-color: yellow;}
 body.test aside{background-color:limegreen;}
-body.test #m_search{background-color: steelblue;}
 body.test section{background-color: orange;}
+body.test footer{background-color: pink;}
+body.test #m_search{background-color: steelblue;}
 /***********************************************/
 #header_h{float: left;}
 #main_img{padding: 20px;}
