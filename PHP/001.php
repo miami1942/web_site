@@ -7,35 +7,66 @@
 
   </head>
   <body id="target" class="test">
+    <!--********헤더*********-->
     <header>
-      <!--       로고 및 제목       -->
+      <h1 class="logo">HTML 일기장</h1>
       <a href="../index.php">
-        <img class="main_img" src="../images/main_image.png"
+        <img id="main_img" src="../images/main_image.png"
              width="300" height="150">
       </a>
     </header>
-<!--######################################################-->
-    <aside>
-      <!--       목록       -->
-      <ul>
-        <li id="M_list">가상의 리스트1</li>
-        <menu id="S_list"><a href="../php/001.php">리스트1 메뉴1</a></menu>
-        <menu id="S_list"><a href="../php/002.php">리스트1 메뉴2</a></menu>
-        <menu id="S_list"><a href="../php/003.php">리스트1 메뉴3</a></menu>
-        <li id="M_list">가상의 리스트2</li>
-        <li id="M_list">가상의 리스트3</li>
-      </ul>
-    </aside>
-  <!--######################################################-->
-    <section id="main_side">
-      <article>
-        <!--       본문내용      -->
-        가상의 리스트1 메뉴1
-      </article>
-    </section>
-  <!--######################################################-->
+    <!--******전체 본문******-->
+    <div class="container">
+      <!--******리스트******-->
+      <aside>
+        <ul>
+          <li>가상의 리스트1</li>
+          <menu><a href="../php/001.php">리스트1 메뉴1</a></menu>
+          <menu><a href="../php/002.php">리스트1 메뉴2</a></menu>
+          <menu><a href="../php/003.php">리스트1 메뉴3</a></menu>
+          <li>가상의 리스트2</li>
+          <li>가상의 리스트3</li>
+        </ul>
+      </aside>
+      <!--******메인******-->
+      <section>
+        <!--******검색******-->
+        <form id="m_search" action="../php/main.php">
+          메인페이지 테스트
+          <input type="text" name="page_num">
+          <input type="submit" name="submit" value="이동">
+        </form>
+        <!--******내용******-->
+        <article>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+          가상의 리스트 메뉴1<br>
+        </article>
+      </section>
+    </div>
+    <!--******풋터******-->
     <footer>
-      <!--       전화번호등 참고사항      -->
       phone 000-0000-0000
       fax 0000-0000-0000-0000<br>
       home aaaa-bbbb-ccc-000d-000h<br>
@@ -45,7 +76,7 @@
       </div>
     </footer>
     <!--js파일은 특정한 위치에 있어야 작동함-->
-    <script src="../js/test_button.js"></script>
+    <script src="js/test_button.js"></script>
     <!--이 위치로 test_button.js의 코드를 넣는다-->
   </body>
 </html>
