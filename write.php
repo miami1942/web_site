@@ -40,8 +40,8 @@
         <!--******검색******-->
       <div>
         <div class="write_button">
-          <a href="write.php">
-            <input type="button" value="새 글쓰기" id="write"/>
+          <a href="index.php">
+            <input type="button" value="쓰기 종료" id="exit"/>
           </a>
         </div>
         <form id="m_search" action="php/main.php">
@@ -52,29 +52,18 @@
       </div>
         <!--******내용******-->
         <article>
-          <?php
-          //  if(empty($val)==false){
-          //    echo file_get_contents("txt_info/".$_GET['id'].".txt");
-          //  }
-          //  if (empty($_GET['id'])==false) {
-          //    echo file_get_contents("game_txt/".$_GET['id'].".txt");
-          //  }
-          if(empty($_GET['id'])===false){
-            $sql = 'SELECT * FROM chronological_order WHERE id='.$_GET['id'];
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($result);
-
-            echo '<h2>'.$row['title'].'</h2>';
-            echo $row['description'].'<br/><br/>';
-            echo '작성자 : '.$row['author'].'<br/>';
-            echo '작성 날짜 : '.$row['created'].'<br />';
-            echo '<h6>페이지번호 : '.$row['id'].'</h6>';
-          }
-          else {
-            echo "환영합니다".'<br/>';
-            echo "이곳은 스카이림의 순서를 위한 게시판 입니다.";
-          }
-          ?>
+          <form action="php/write_process.php" method="post">
+            <p>
+              제목 : <input type="text" name="title">
+            </p>
+            <p>
+              작성자 : <input type="text" name="author">
+            </p>
+            <p>
+              본문 : <textarea name="description"></textarea>
+            </p>
+            <input type="submit" name="write_now" value="저장">
+          </form>
         </article>
       </section>
     </div>

@@ -1,10 +1,12 @@
 body{
+  background-color: #EEEEEE;
   padding: 0px; margin: 0px;
 }
 .body_class{
 }
 header{
-  background-color: lightgrey;
+  color: white;
+  background-color: dimgray;
   border-bottom: 3px solid gray;
   text-align: right;
 }
@@ -22,6 +24,7 @@ header{
   overflow: hidden;
 }
 aside{
+  background-color: silver;
   font-size: 1rem;
   float: left;
   width: 200px;
@@ -32,23 +35,32 @@ aside{
   border-bottom: 2px solid #efefef;
 }
 section{
+  background-color: #EEEEEE;
   margin-left: 200px;
   font-size: 1rem;
   border-left: 3px solid gray;
 }
 #m_search{
+  background-color: lightgrey;
   padding : 3px; margin: 0px;
   border-bottom: 3px solid gray;
 }
 article{
   padding: 10px;
+  padding-left: 30px;
 }
 footer{
   font-size: 1rem;
-  background-color: lightgrey;
+  color: white;
+  background-color: #333333;
   border-top: 3px solid gray;
   position: relative;
   min-width: 100%;
+}
+.write_button{
+  float: right;
+  margin: 3px;
+  margin-right: 10px;
 }
 #test_button{
   text-align: right;
@@ -60,4 +72,6 @@ footer{
 .test aside{background-color:limegreen;}
 .test #m_search{background-color: steelblue;}
 .test section{background-color: orange;}
+.test footer{background-color: purple;}
+.test header{background-color: darkblue;}
 .test{background-color: yellow;}
