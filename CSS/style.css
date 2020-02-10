@@ -1,6 +1,7 @@
-
 body{
-  padding: 0px; margin: 0px
+  padding: 0px; margin: 0px;
+}
+.body_class{
 }
 header{
   background-color: lightgrey;
@@ -8,23 +9,27 @@ header{
   text-align: right;
 }
 #main_img{
-  padding: 20px;
+  padding: 10px;
 }
 .logo{
   float: left;
   font-size: 30px;
   font-weight: bold;
-  padding: 20px;
+  padding-left: 40px;
+  padding-top: 50px;
 }
 .container{/*내부의 float를 위해 hidden을 해서 전부 포함한다*/
   overflow: hidden;
-  width: 100%;
 }
 aside{
   font-size: 1rem;
   float: left;
   width: 200px;
-  height: inherit;
+  border-right: 3px solid gray;
+}
+.border_list{
+  margin-right: 30px;
+  border-bottom: 2px solid #efefef;
 }
 section{
   margin-left: 200px;
@@ -42,6 +47,8 @@ footer{
   font-size: 1rem;
   background-color: lightgrey;
   border-top: 3px solid gray;
+  position: relative;
+  min-width: 100%;
 }
 #test_button{
   text-align: right;
@@ -53,3 +60,4 @@ footer{
 .test aside{background-color:limegreen;}
 .test #m_search{background-color: steelblue;}
 .test section{background-color: orange;}
+.test{background-color: yellow;}

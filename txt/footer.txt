@@ -1,0 +1,3 @@
+phone 000-0000-0000
+fax 0000-0000-0000-0000<br>
+home aaaa-bbbb-ccc-000d-000h<br>
