@@ -60,15 +60,20 @@
           //    echo file_get_contents("game_txt/".$_GET['id'].".txt");
           //  }
           if(empty($_GET['id'])===false){
-            $sql = 'SELECT * FROM chronological_order WHERE id='.$_GET['id'];
+            //$sql = 'SELECT * FROM chronological_order WHERE id='.$_GET['id'];
+            $order_id = $_GET['id'];
+            $sql = "SELECT *
+            FROM chronological_order LEFT JOIN user
+            ON chronological_order.author = user.id
+            WHERE chronological_order.id=".$_GET['id'];
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
 
             echo '<h2>'.$row['title'].'</h2>';
             echo $row['description'].'<br/><br/>';
-            echo '작성자 : '.$row['author'].'<br/>';
+            echo '작성자 : '.$row['name'].'<br/>';
             echo '작성 날짜 : '.$row['created'].'<br />';
-            echo '<h6>페이지번호 : '.$row['id'].'</h6>';
+            echo '<h6>페이지번호 : '.$order_id.'</h6>';
           }
           else {
             echo "환영합니다".'<br/>';
