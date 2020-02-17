@@ -1,6 +1,6 @@
 <?php
   $conn = mysqli_connect("localhost", "root", "wkdgmd7093");
-  mysqli_select_db($conn,"skyrim");
+  mysqli_select_db($conn,"website");
   $sql = "SELECT * FROM user WHERE name='".$_POST['author']."'";
   $result = mysqli_query($conn, $sql);
 
@@ -15,7 +15,7 @@
     $user_id = $row['id'];
   }
 
-  $sql = "INSERT INTO chronological_order (author, title, description)
+  $sql = "INSERT INTO web_info (author, title, description)
   VALUES('".$user_id."','".$_POST['title']."','".$_POST['description']."')";
   $result = mysqli_query($conn, $sql);
 

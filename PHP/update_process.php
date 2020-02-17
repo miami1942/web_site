@@ -1,6 +1,6 @@
 <?php
   $conn = mysqli_connect("localhost", "root", "wkdgmd7093");
-  mysqli_select_db($conn,"skyrim");
+  mysqli_select_db($conn,"website");
   $sql = "SELECT * FROM user WHERE name='".$_POST['author']."'";
   $result = mysqli_query($conn, $sql);
   $order_id = $_POST['id'];
@@ -16,7 +16,7 @@
     $user_id = $row['id'];
   }
 
-  $sql = "UPDATE chronological_order SET
+  $sql = "UPDATE web_info SET
   author = '".$user_id."',
   title = '".$_POST['title']."',
   description = '".$_POST['description']."',

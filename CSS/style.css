@@ -1,17 +1,18 @@
 body{
-  background-color: #EEEEEE;
+  background-color: #ffffff;
   padding: 0px; margin: 0px;
+  color: #222222;
 }
 .body_class{
 }
 header{
-  color: white;
-  background-color: dimgray;
-  border-bottom: 3px solid gray;
+  background-color: #ffffff;
+  border-bottom: 3px solid #777777;
   text-align: right;
 }
 #main_img{
   padding: 10px;
+  margin-right: 20px;
 }
 .logo{
   float: left;
@@ -24,33 +25,33 @@ header{
   overflow: hidden;
 }
 aside{
-  background-color: silver;
   font-size: 1rem;
   float: left;
   width: 200px;
-  border-right: 3px solid gray;
+  border-right: 3px solid #777777;
 }
 .border_list{
   margin-right: 30 px;
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid #777777;
 }
 section{
-  background-color: #EEEEEE;
   margin-left: 200px;
   font-size: 1rem;
-  border-left: 3px solid gray;
+  border-left: 3px solid #777777;
 }
 #m_search{
-  background-color: lightgrey;
   padding : 3px; margin: 0px;
-  border-bottom: 3px solid gray;
+  border-bottom: 3px solid #777777;
 }
 article{
-  padding: 10px;
+  padding-top: 20px;
   padding-left: 30px;
+  padding-right: 30px;
 }
 .u_d_button{
   display: table;
+  margin-left: auto;
+  padding-bottom: 5px;
 }
 .u_button{
   display: table-cell;
@@ -71,9 +72,8 @@ article{
 }
 footer{
   font-size: 1rem;
-  color: white;
-  background-color: #333333;
-  border-top: 3px solid gray;
+  background-color: #ffffff;
+  border-top: 3px solid #777777;
   position: relative;
   min-width: 100%;
 }
@@ -93,9 +93,32 @@ footer{
 
 
 /*테스트 온*/
-.test aside{background-color:limegreen;}
-.test #m_search{background-color: steelblue;}
-.test section{background-color: orange;}
-.test footer{background-color: purple;}
-.test header{background-color: darkblue;}
-.test{background-color: yellow;}
+.test{background-color: khaki;}
+.test header{background-color: beige;}
+.test aside{background-color:darkgreen;}
+.test #m_search{background-color: deepskyblue;}
+.test section{background-color: slategray;}
+.test footer{background-color: plum;}
+/************글씨 관련***************/
+a{/*링크 색, 밑줄 없애기*/
+  text-decoration: none;
+  color: inherit;
+}
+.title_text{
+  font-size: 30pt;
+  border-bottom: 3px solid #dddddd;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.main_text{
+  margin-bottom: 50px;
+}
+.name_text{
+  padding-top: 10px;
+  font-size: 11pt;
+  border-top: 3px solid #dddddd;
+}
+.id_text{
+  font-size: 10px;
+  margin-top: 10px;
+}

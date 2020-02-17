@@ -1,21 +1,20 @@
 <?php
   $conn = mysqli_connect("localhost", "root", "wkdgmd7093");
-  mysqli_select_db($conn,"skyrim");
-  $result = mysqli_query($conn, "SELECT * FROM chronological_order");
+  mysqli_select_db($conn,"website");
+  $result = mysqli_query($conn, "SELECT * FROM web_info");
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>HTML 일기장</title>
+    <title>긍준의 웹 사이트</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_skyrim.css">
   </head>
   <body id="target" class="">
     <div class="body_class">
     <!--********헤더*********-->
     <header>
-      <h1 class="logo">HTML 일기장</h1>
+      <h1 class="logo">긍준의 웹 사이트</h1>
       <a href="index.php">
         <img id="main_img" src="images/main_image.png"
              width="300" height="150">
@@ -45,7 +44,7 @@
           </a>
         </div>
         <form id="m_search" action="php/main.php">
-          메인페이지 테스트
+          페이지 이동(테스트)
           <input type="text" name="page_num">
           <input type="submit" name="submit" value="이동">
         </form>
@@ -60,20 +59,20 @@
           //    echo file_get_contents("game_txt/".$_GET['id'].".txt");
           //  }
           if(empty($_GET['id'])===false){
-            //$sql = 'SELECT * FROM chronological_order WHERE id='.$_GET['id'];
+            //$sql = 'SELECT * FROM web_info WHERE id='.$_GET['id'];
             $order_id = $_GET['id'];
             $sql = "SELECT *
-            FROM chronological_order LEFT JOIN user
-            ON chronological_order.author = user.id
-            WHERE chronological_order.id=".$_GET['id'];
+            FROM web_info LEFT JOIN user
+            ON web_info.author = user.id
+            WHERE web_info.id=".$_GET['id'];
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
 
-            echo '<h2>'.$row['title'].'</h2>';
-            echo $row['description'].'<br/><br/>';
-            echo '작성자 : '.$row['name'].'<br/>';
-            echo '작성 날짜 : '.$row['created'].'<br />';
-            echo '<h6>페이지번호 : '.$order_id.'</h6>';
+            echo "<div class='title_text'>".$row['title']."</div>";
+            echo "<div class='main_text'>".$row['description']."</div>";
+            echo "<div class='name_text'>작성자 : ".$row['name']."<br/>
+            작성 날짜 : ".$row['created']."<br /></div>";
+            echo "<div class='id_text'>페이지번호 : ".$order_id."</div>";
 
             echo "
             <div class='u_d_button'>
@@ -87,8 +86,8 @@
             </div>";
           }//type='submit'은 form으로 전송하는것이다. button은 전송이안된다.
           else {
-            echo "환영합니다".'<br/>';
-            echo "이곳은 스카이림의 순서를 위한 게시판 입니다.";
+            echo "환영합니다!".'<br/><br/>';
+            echo "이곳은 웹페이지를 만드는 정보를 담은 게시판 입니다.";
           }
           ?>
         </article>
