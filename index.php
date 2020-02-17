@@ -74,7 +74,18 @@
             echo '작성자 : '.$row['name'].'<br/>';
             echo '작성 날짜 : '.$row['created'].'<br />';
             echo '<h6>페이지번호 : '.$order_id.'</h6>';
-          }
+
+            echo "
+            <div class='u_d_button'>
+            <a href='update.php?id=".$order_id."'>
+              <input type='button' id='db_update' value='수정'>
+            </a>
+            <form class='d_button' action='php/delete_process.php' method='post'>
+              <input type='submit' id='db_delete' value='삭제'>
+              <input type='hidden' name='id' value=".$order_id.">
+            </form>
+            </div>";
+          }//type='submit'은 form으로 전송하는것이다. button은 전송이안된다.
           else {
             echo "환영합니다".'<br/>';
             echo "이곳은 스카이림의 순서를 위한 게시판 입니다.";
@@ -88,10 +99,6 @@
       <?php
         echo file_get_contents('txt/footer.txt');
       ?>
-      <div id="test_button">
-        <input type="button" value="테스트 켜기" id="test_on_btn"/>
-        <input type="button" value="테스트 끄기" id="test_off_btn"/>
-      </div>
     </footer>
     <!--js파일은 특정한 위치에 있어야 작동함-->
     <script src="js/test_button.js"></script>

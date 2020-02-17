@@ -1,3 +1,9 @@
-phone 000-0000-0000
-fax 0000-0000-0000-0000<br>
-home aaaa-bbbb-ccc-000d-000h<br>
+<div id="footer_write">
+  phone 010-9375-0233<br>
+  fax 그런거 없음<br>
+  home 031-990-3311
+</div>
+<div id="test_button">
+  <input type="button" value="테스트 켜기" id="test_on_btn"/>
+  <input type="button" value="테스트 끄기" id="test_off_btn"/>
+</div>

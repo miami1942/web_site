@@ -49,6 +49,26 @@ article{
   padding: 10px;
   padding-left: 30px;
 }
+.u_d_button{
+  display: table;
+}
+.u_button{
+  display: table-cell;
+}
+.d_button{
+  display: table-cell;
+}
+#in_title{
+  width: 100%;
+}
+#in_author{
+  width: 100%;
+}
+#in_description{
+  width: 100%;
+  min-height: 300px;
+  max-height: 100%;
+}
 footer{
   font-size: 1rem;
   color: white;
@@ -61,6 +81,10 @@ footer{
   float: right;
   margin: 3px;
   margin-right: 10px;
+}
+#footer_write{
+  margin-left: 10px;
+  margin-top: 10px;
 }
 #test_button{
   text-align: right;

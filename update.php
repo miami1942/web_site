@@ -41,7 +41,7 @@
       <div>
         <div class="write_button">
           <a href="index.php">
-            <input type="button" value="쓰기 종료" id="exit"/>
+            <input type="button" value="수정 종료" id="exit"/>
           </a>
         </div>
         <form id="m_search" action="php/main.php">
@@ -52,21 +52,58 @@
       </div>
         <!--******내용******-->
         <article>
-          <form action="php/write_process.php" method="post">
+          <?php
+          if(empty($_GET['id'])===false){
+            $order_id = $_GET['id'];
+            $sql = "SELECT * ,chronological_order.id as c_id
+            FROM chronological_order LEFT JOIN user
+            ON chronological_order.author = user.id
+            WHERE chronological_order.id=".$_GET['id'];
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+
+            echo "
+            <form action='php/update_process.php' method='post'>
+                <input type='hidden' name='id' value=".$row['c_id'].">
+              <p>
+                제목
+                <input type='text' name='title' value=".$row['title']." id='in_title'>
+              </p>
+              <p>
+                작성자
+                <input type='text' name='author' value=".$row['name']." id='in_author'>
+              </p>
+              <p>
+                본문
+                <textarea name='description' id='in_description'>".$row['description']."</textarea>
+              </p>
+              <input type='submit' name='update_now' value='수정'>
+            </form>
+            ";
+          }
+
+          /*    실패 다음에 도전해볼것
+          $var_title= $_POST['index_title'];
+          $var_author= $_POST['index_author'];
+          $var_description= $_POST['index_description'];
+          $var_id= $_POST['index_id'];
+          echo "
+          <form action='php/update_process.php' method='post'>
             <p>
               제목
-              <input type="text" name="title" id="in_title">
+              <input type='text' name='title' value=".$var_title." id='in_title'>
             </p>
             <p>
               작성자
-              <input type="text" name="author" id="in_author">
+              <input type='text' name='author' value=".$var_author." id='in_author'>
             </p>
             <p>
               본문
-              <textarea name="description" id="in_description"></textarea>
+              <textarea name='description' id='in_description'>".$var_description."</textarea>
             </p>
-            <input type="submit" name="write_now" value="저장">
+            <input type='submit' name='update_now' value='수정'>
           </form>
+          ";*/?>
         </article>
       </section>
     </div>
