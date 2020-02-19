@@ -90,8 +90,7 @@
             </div>";
           }//type='submit'은 form으로 전송하는것이다. button은 전송이안된다.
           else {
-            echo "환영합니다!".'<br/><br/>';
-            echo "이곳은 웹페이지를 만드는 정보를 담은 게시판 입니다.";
+            echo file_get_contents('txt/main_write.txt');
           }
           ?>
         </article>
